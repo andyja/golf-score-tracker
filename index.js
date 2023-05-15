@@ -14,6 +14,7 @@ function displayScoreBoardHtml(numPlayers) {
         <h1>Player ${i} - Mini-golf counter:</h1>
         <h2 id="count-el-${i}">0</h2>
         <button onclick="increment(${i})">INCREMENT</button>
+        <button onclick="decrement(${i})">DECREMENT</button>
         <button class="save-btn" data-player="${i}">SAVE</button>
         <p>Previous entries: <span id="save-el-${i}"></span></p>
         <button onclick="resetPrevious(${i})">RESET</button>
@@ -46,6 +47,17 @@ function increment(playerId) {
   let countStr = counts[playerId];
   countEl.textContent = countStr;
 }
+function decrement(playerId) {
+  let countEl = document.getElementById(`count-el-${playerId}`);
+  if (!counts[playerId]) {
+    counts[playerId] = 0;
+  }
+  else if (counts[playerId] > 0){
+  counts[playerId]--;
+  let countStr = counts[playerId];
+  countEl.textContent = countStr;
+  }
+}
 function save(playerIndex) {
   let saveEl = document.getElementById(`save-el-${playerIndex}`);
   let countEl = document.getElementById(`count-el-${playerIndex}`);
@@ -57,7 +69,7 @@ function save(playerIndex) {
 
 
 // function resetPrevious() {
-//     countStr = "";
-//     saveEl.textContent = countStr
-// // }
+//     counts = "";
+//     saveEl.textContent = counts
+// }
 // console.log("Save clicked for Player", playerIndex);
