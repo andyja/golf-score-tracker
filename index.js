@@ -39,40 +39,21 @@ scoreBoard.addEventListener('click', function(event) {
 
 function increment(playerId) {
   let countEl = document.getElementById(`count-el-${playerId}`);
-  
   if (!counts[playerId]) {
     counts[playerId] = 0;
   }
-  
   counts[playerId]++;
   let countStr = counts[playerId];
   countEl.innerText = countStr;
-  console.log(counts[playerId]);
 }
-
-
 function save(playerIndex) {
-  let saveEl = document.getElementById(`save-el-${playerId}`);
-  console.log("Save clicked for Player", playerIndex);
-  let countStr = count + " - ";
-  
-  // let saveEl = document.getElementById("save-el-${i}");  
+  let saveEl = document.getElementById(`save-el-${playerIndex}`);
+  let countStr = counts[playerIndex] || 0;
+  saveEl.innerText += countStr + " - ";
 }
-
-
-// function increment(playerId) {
-//   let countEl = document.getElementById(`count-el-${playerId}`);
-//   count++;
-//   let countStr = count;
-//   countEl.innerText = countStr;
-//   console.log(count);
-// }
-
-
-
-
 
 // function resetPrevious() {
 //     countStr = "";
 //     saveEl.textContent = countStr
-// }
+// // }
+// console.log("Save clicked for Player", playerIndex);
