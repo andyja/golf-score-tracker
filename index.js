@@ -44,12 +44,12 @@ function increment(playerId) {
   }
   counts[playerId]++;
   let countStr = counts[playerId];
-  countEl.innerText = countStr;
+  countEl.textContent = countStr;
 }
 function save(playerIndex) {
   let saveEl = document.getElementById(`save-el-${playerIndex}`);
   let countStr = counts[playerIndex] || 0;
-  saveEl.innerText += countStr + " - ";
+  saveEl.textContent += countStr + " - "; 
 }
 
 // function resetPrevious() {
