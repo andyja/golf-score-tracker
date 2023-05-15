@@ -1,10 +1,16 @@
-/* body {
-    background-image: url("mini-golf.avif");
-    background-size: cover;
+html, body {
+    height:100%;
+} 
+body {
+    background-color: white;
+    background-image: url(/images/andrew-shelley-Yu6Z_Fia1Ls-unsplash.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
     font-family: -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     text-align: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .container {
     background: white;
@@ -40,13 +46,16 @@ button {
     margin-bottom: 5px;
     border-radius: 5px;
 }
-
-#increment-btn {
+.decrement-btn {
+    color: white;
+    background: pink;
+}
+.increment-btn {
     color: white;
     background: darkred;
 }
 
-#save-btn {
+.save-btn {
     color: white;
     background: darkgreen;
-} */
+}

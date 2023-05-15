@@ -7,14 +7,13 @@ let counts = [];
 
 function displayScoreBoardHtml(numPlayers) {
   scoreBoard.innerHTML = '';
-
   for (let i = 1; i <= numPlayers; i++) {
     let scoreboardHtml = `
       <div>
         <h1>Player ${i} - Mini-golf counter:</h1>
         <h2 id="count-el-${i}">0</h2>
-        <button onclick="increment(${i})">INCREMENT</button>
-        <button onclick="decrement(${i})">DECREMENT</button>
+        <button class="increment-btn" onclick="increment(${i})">INCREMENT</button>
+        <button class="decrement-btn" onclick="decrement(${i})">DECREMENT</button>
         <button class="save-btn" data-player="${i}">SAVE</button>
         <p>Previous entries: <span id="save-el-${i}"></span></p>
         <button onclick="resetPrevious(${i})">REMOVE LAST SCORE</button>
@@ -24,7 +23,6 @@ function displayScoreBoardHtml(numPlayers) {
     scoreBoard.innerHTML += scoreboardHtml;
   }
 }
-
 submitBtn.addEventListener('click', function() {
   const numPlayersInput = document.getElementById("num-players-input");
   const numPlayers = parseInt(numPlayersInput.value);
@@ -37,7 +35,6 @@ scoreBoard.addEventListener('click', function(event) {
     save(playerIndex);
   }
 });
-
 function increment(playerId) {
   let countEl = document.getElementById(`count-el-${playerId}`);
   if (!counts[playerId]) {
