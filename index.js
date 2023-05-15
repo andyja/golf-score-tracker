@@ -48,9 +48,13 @@ function increment(playerId) {
 }
 function save(playerIndex) {
   let saveEl = document.getElementById(`save-el-${playerIndex}`);
+  let countEl = document.getElementById(`count-el-${playerIndex}`);
   let countStr = counts[playerIndex] || 0;
-  saveEl.textContent += countStr + " - "; 
+  saveEl.textContent += countStr + " - ";
+  counts[playerIndex] = 0;
+  countEl.textContent = counts[playerIndex];
 }
+
 
 // function resetPrevious() {
 //     countStr = "";
