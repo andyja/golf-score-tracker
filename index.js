@@ -66,16 +66,9 @@ function save(playerIndex) {
   counts[playerIndex] = 0;
   countEl.textContent = counts[playerIndex];
 }
-
-
-// function resetCounter() {
-//     counts = "";
-//     saveEl.textContent = counts
-// }
-// console.log("Save clicked for Player", playerIndex);
-
-function resetPrevious(playerIndex){
+function resetPrevious(playerIndex) {
   let saveEl = document.getElementById(`save-el-${playerIndex}`);
-  saveEl.textContent = '';
-
+  let previousEntries = saveEl.textContent.trim().split(' - ');
+  previousEntries.pop();
+  saveEl.textContent = previousEntries.join(' - ');
 }
