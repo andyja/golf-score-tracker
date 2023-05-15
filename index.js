@@ -17,7 +17,7 @@ function displayScoreBoardHtml(numPlayers) {
         <button onclick="decrement(${i})">DECREMENT</button>
         <button class="save-btn" data-player="${i}">SAVE</button>
         <p>Previous entries: <span id="save-el-${i}"></span></p>
-        <button onclick="resetPrevious(${i})">RESET</button>
+        <button onclick="resetPrevious(${i})">REMOVE LAST SCORE</button>
       </div>
     `;
 
@@ -68,8 +68,14 @@ function save(playerIndex) {
 }
 
 
-// function resetPrevious() {
+// function resetCounter() {
 //     counts = "";
 //     saveEl.textContent = counts
 // }
 // console.log("Save clicked for Player", playerIndex);
+
+function resetPrevious(playerIndex){
+  let saveEl = document.getElementById(`save-el-${playerIndex}`);
+  saveEl.textContent = '';
+
+}
