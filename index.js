@@ -3,7 +3,7 @@ let countEl = document.getElementById("count-el");
 let resetBtn = document.getElementById("reset-btn");
 let submitBtn = document.getElementById("num-players-submit-btn");
 let scoreBoard = document.getElementById("score-board");
-let count = 0;
+let counts = [];
 
 function displayScoreBoardHtml(numPlayers) {
   scoreBoard.innerHTML = '';
@@ -37,40 +37,41 @@ scoreBoard.addEventListener('click', function(event) {
   }
 });
 
-function save(playerIndex) {
-  console.log("Save clicked for Player", playerIndex);
-
-  let saveEl = document.getElementById("save-el-${i}");  
-}
 function increment(playerId) {
   let countEl = document.getElementById(`count-el-${playerId}`);
-  let saveEl = document.getElementById(`save-el-${playerId}`);
-
-  count++;
-  let countStr = count + " - ";
+  
+  if (!counts[playerId]) {
+    counts[playerId] = 0;
+  }
+  
+  counts[playerId]++;
+  let countStr = counts[playerId];
   countEl.innerText = countStr;
-
-  console.log(count);
+  console.log(counts[playerId]);
 }
 
 
+function save(playerIndex) {
+  let saveEl = document.getElementById(`save-el-${playerId}`);
+  console.log("Save clicked for Player", playerIndex);
+  let countStr = count + " - ";
+  
+  // let saveEl = document.getElementById("save-el-${i}");  
+}
 
 
-
-
-// let count = 0;
-// let countStr = "";
-
-
-
-
-
-// function save() {
-//     countStr = count + " - "
-//     saveEl.textContent += countStr
-//     countEl.textContent = 0;
-//     count = 0;
+// function increment(playerId) {
+//   let countEl = document.getElementById(`count-el-${playerId}`);
+//   count++;
+//   let countStr = count;
+//   countEl.innerText = countStr;
+//   console.log(count);
 // }
+
+
+
+
+
 // function resetPrevious() {
 //     countStr = "";
 //     saveEl.textContent = countStr
