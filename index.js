@@ -9,7 +9,7 @@ function displayScoreBoardHtml(numPlayers) {
   scoreBoard.innerHTML = '';
   for (let i = 1; i <= numPlayers; i++) {
     let scoreboardHtml = `
-      <div>
+      <div class="eachScore">
         <h1>Player ${i} - Mini-golf counter:</h1>
         <h2 id="count-el-${i}">0</h2>
         <button class="increment-btn" onclick="increment(${i})">INCREMENT</button>

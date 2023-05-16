@@ -1,30 +1,44 @@
-html, body {
-    height:100%;
-} 
 body {
     background-color: white;
-    background-image: url(images/matthew-mcbrayer-fZL3EN4aJUI-unsplash.jpg);
+    background-image: url(images/alexander-grey-fSlCxR0dnZY-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
     text-align: center;
     max-height: 100vh;
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-}
-#scoreboard {
-    background: white;
-    max-width: 80%;
     margin: auto;
-    border: 3px solid black;
-    border-radius: 10px;
+    text-align: center;
 }
+#player-num {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    /* text-align: center; */
+}
+
+#score-board {
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+}
+.eachScore {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+  }
 p {
     color: black;
 }
 h1 {
-    color: black;
+    color: darkgreen;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -32,10 +46,9 @@ h1 {
 h2 {
     color: black;
     font-size: 50px;
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
-
 button {
     color: white;
     border: 2px solid black;
