@@ -4,7 +4,7 @@ let resetBtn = document.getElementById("reset-btn");
 let submitBtn = document.getElementById("num-players-submit-btn");
 let scoreBoard = document.getElementById("score-board");
 let counts = [];
-
+let playerNum = document.getElementById("player-num");
 function displayScoreBoardHtml(numPlayers) {
   scoreBoard.innerHTML = '';
   for (let i = 1; i <= numPlayers; i++) {
@@ -22,6 +22,7 @@ function displayScoreBoardHtml(numPlayers) {
 
     scoreBoard.innerHTML += scoreboardHtml;
   }
+  playerNum.remove()
 }
 submitBtn.addEventListener('click', function() {
   const numPlayersInput = document.getElementById("num-players-input");
