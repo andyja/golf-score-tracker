@@ -7,17 +7,15 @@ body {
     font-weight: normal;
     text-align: center;
     max-height: 100vh;
-    position: absolute;
     margin: auto;
-    text-align: center;
 }
 #player-num {
-    text-align: center;
-    margin: 0 auto;
+    font-size: 32px;
+    display: inline-block;
+    width: 50%;
+    margin: 50px auto;
     padding: 15px;
-    /* text-align: center; */
 }
-
 #score-board {
     margin: auto;
     display: flex;
@@ -42,7 +40,6 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 h2 {
     color: black;
     font-size: 50px;
@@ -64,11 +61,10 @@ button {
     color: white;
     background: pink;
 }
-.increment-btn {
+.increment-btn, #num-players-submit-btn {
     color: white;
     background: darkred;
 }
-
 .save-btn {
     color: white;
     background: darkgreen;

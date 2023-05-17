@@ -3,8 +3,8 @@ let countEl = document.getElementById("count-el");
 let resetBtn = document.getElementById("reset-btn");
 let submitBtn = document.getElementById("num-players-submit-btn");
 let scoreBoard = document.getElementById("score-board");
-let counts = [];
 let playerNum = document.getElementById("player-num");
+let counts = [];
 function displayScoreBoardHtml(numPlayers) {
   scoreBoard.innerHTML = '';
   for (let i = 1; i <= numPlayers; i++) {
@@ -19,7 +19,6 @@ function displayScoreBoardHtml(numPlayers) {
         <button onclick="resetPrevious(${i})">REMOVE LAST SCORE</button>
       </div>
     `;
-
     scoreBoard.innerHTML += scoreboardHtml;
   }
   playerNum.remove()
