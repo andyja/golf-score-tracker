@@ -49,7 +49,6 @@ button {
     border: 2px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: white;
     font-weight: bold;
     width: 200px;
     margin-bottom: 5px;
@@ -66,4 +65,8 @@ button {
 .save-btn {
     color: white;
     background: darkgreen;
+}
+.remove-last-btn{
+    color: beige;
+    background-color: red   ;
 }

@@ -20,7 +20,9 @@ function displayScoreBoardHtml(numPlayers) {
         <button class="save-btn" data-player="${i}">SAVE</button>
         </div>
         <p>Previous entries: <span id="save-el-${i}"></span></p>
-        <button onclick="resetPrevious(${i})">REMOVE LAST SCORE</button>
+        <div>
+        <button class="remove-last-btn" onclick="resetPrevious(${i})">REMOVE LAST SCORE</button>
+        </div>
       </div>
     `;
     scoreBoard.innerHTML += scoreboardHtml;
