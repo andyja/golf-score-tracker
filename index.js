@@ -12,9 +12,13 @@ function displayScoreBoardHtml(numPlayers) {
       <div class="eachScore">
         <h1>Player ${i} - Mini-golf counter:</h1>
         <h2 id="count-el-${i}">0</h2>
-        <button class="increment-btn" onclick="increment(${i})">INCREMENT</button>
-        <button class="decrement-btn" onclick="decrement(${i})">DECREMENT</button>
+        <div>
+          <button class="increment-btn" onclick="increment(${i})">INCREMENT</button>
+          <button class="decrement-btn" onclick="decrement(${i})">DECREMENT</button>
+        </div>
+        <div>  
         <button class="save-btn" data-player="${i}">SAVE</button>
+        </div>
         <p>Previous entries: <span id="save-el-${i}"></span></p>
         <button onclick="resetPrevious(${i})">REMOVE LAST SCORE</button>
       </div>

@@ -17,7 +17,7 @@ body {
     padding: 15px;
 }
 #score-board {
-    margin: auto;
+    margin: 10px auto;
     display: flex;
     gap: 10px;
     flex-direction: row;
@@ -37,14 +37,12 @@ p {
 }
 h1 {
     color: darkgreen;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 5px;
 }
 h2 {
     color: black;
     font-size: 50px;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin: 5px;
 }
 button {
     color: white;
