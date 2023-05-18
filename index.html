@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <script src="https://kit.fontawesome.com/c905f1f494.js" crossorigin="anonymous"></script>
-        <link rel="icon" type="image/x-icon" href="./images/golf-club-regular.svg">
+        <link rel="icon" id="favicon" type="image/x-icon" href="./images/golf-club-regular.svg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;800&display=swap" rel="stylesheet">
@@ -15,6 +15,19 @@
         </div>
         <div id="score-board">
         </div>
-        <script src="index.js"></script>
+        <script src="index.js">
+
+            document.addEventListener("visibilitychange", function() {
+                var favicon = document.getElementById("favicon");
+                if (document.visibilityState === "visible") {
+                    favicon.href = "images/golf-ball-tee-solid (1).svg";
+                } else {
+                    favicon.href = "./images/golf-club-regular.svg";
+                }
+                });
+        </script>
     </body>
 </html>
+
+
+

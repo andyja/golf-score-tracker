@@ -70,3 +70,6 @@ button {
     color: beige;
     background-color: red   ;
 }
+.tabs-header-tab.active i {
+    color: green;
+}
